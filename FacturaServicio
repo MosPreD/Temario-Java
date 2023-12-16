@@ -1,0 +1,134 @@
+package Modelo;
+
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="FacturaServicio", schema = "orm.FacturaServicio", catalog = "")
+public class FacturaServicio {
+    private int NroServicio;
+    private Factura nrofactura;
+    private int importeTotal;
+    private int importeIva;
+    private int importeNeto;
+    private float PorcentajeIVA;
+    public FacturaServicio(int nroServicio, Factura nrofactura, int importeTotal, int importeIva, int importeNeto,
+            float porcentajeIVA) {
+        NroServicio = nroServicio;
+        this.nrofactura = nrofactura;
+        this.importeTotal = importeTotal;
+        this.importeIva = importeIva;
+        this.importeNeto = importeNeto;
+        PorcentajeIVA = porcentajeIVA;
+    }
+    public FacturaServicio() {
+    }
+    public FacturaServicio(int nroServicio) {
+        NroServicio = nroServicio;
+    }
+
+    @Id
+    @Column(name ="NroServicio")
+    public int getNroServicio() {
+        return NroServicio;
+    }
+    public void setNroServicio(int nroServicio) {
+        NroServicio = nroServicio;
+    }
+
+    @ManyToOne
+    @JoinColumn(name = "NroFactura", referencedColumnName = "NroFactura", nullable = false)
+    public Factura getNrofactura() {
+        return nrofactura;
+    }
+    public void setNrofactura(Factura nrofactura) {
+        this.nrofactura = nrofactura;
+    }
+
+    @Basic
+    @Column(name ="ImporteTotal")
+    public int getImporteTotal() {
+        return importeTotal;
+    }
+    public void setImporteTotal(int importeTotal) {
+        this.importeTotal = importeTotal;
+    }
+
+    @Basic
+    @Column(name ="ImporteIVA")
+    public int getImporteIva() {
+        return importeIva;
+    }
+    public void setImporteIva(int importeIva) {
+        this.importeIva = importeIva;
+    }
+
+    @Basic
+    @Column(name ="ImporteNeto")
+    public int getImporteNeto() {
+        return importeNeto;
+    }
+    public void setImporteNeto(int importeNeto) {
+        this.importeNeto = importeNeto;
+    }
+
+    @Basic
+    @Column(name ="PorcentajeIVA")
+    public float getPorcentajeIVA() {
+        return PorcentajeIVA;
+    }
+    public void setPorcentajeIVA(float porcentajeIVA) {
+        PorcentajeIVA = porcentajeIVA;
+    }
+    @Override
+    public String toString() {
+        return "FacturaServicio [NroServicio=" + NroServicio + ", nrofactura=" + nrofactura + ", importeTotal="
+                + importeTotal + ", importeIva=" + importeIva + ", importeNeto=" + importeNeto + ", PorcentajeIVA="
+                + PorcentajeIVA + "]";
+    }
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + NroServicio;
+        result = prime * result + ((nrofactura == null) ? 0 : nrofactura.hashCode());
+        result = prime * result + importeTotal;
+        result = prime * result + importeIva;
+        result = prime * result + importeNeto;
+        result = prime * result + Float.floatToIntBits(PorcentajeIVA);
+        return result;
+    }
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        FacturaServicio other = (FacturaServicio) obj;
+        if (NroServicio != other.NroServicio)
+            return false;
+        if (nrofactura == null) {
+            if (other.nrofactura != null)
+                return false;
+        } else if (!nrofactura.equals(other.nrofactura))
+            return false;
+        if (importeTotal != other.importeTotal)
+            return false;
+        if (importeIva != other.importeIva)
+            return false;
+        if (importeNeto != other.importeNeto)
+            return false;
+        if (Float.floatToIntBits(PorcentajeIVA) != Float.floatToIntBits(other.PorcentajeIVA))
+            return false;
+        return true;
+    }
+
+    
+}
