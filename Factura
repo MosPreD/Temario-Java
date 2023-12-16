@@ -32,6 +32,7 @@ public class Factura {
     }
 
     @Id
+    //@GeneratedValue(strategy = GenerationType.AUTO) Id auto generado
     @Column(name ="NroFactura")
     public int getNroFactura() {
         return NroFactura;
