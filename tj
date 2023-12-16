@@ -93,6 +93,7 @@ Hashtale:
 -	Utilizado en operaciones de concurrencia.
 
 Interfaz Stream, métodos:
+Stream | SQL
 From	| stream()
 Select | map()
 Where | filter() (antes de un collecting)
