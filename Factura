@@ -1,0 +1,127 @@
+package Modelo;
+
+import javax.persistence.Basic;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="Factura", schema = "orm.Factura", catalog = "")
+
+public class Factura {
+    private int NroFactura;
+    private int periodo;
+    private int importeTotal;
+    private int importeNeto;
+    private String estado;
+
+    public Factura(int nroFactura, int periodo, int importeTotal, int importeNeto, String estado) {
+        NroFactura = nroFactura;
+        this.periodo = periodo;
+        this.importeTotal = importeTotal;
+        this.importeNeto = importeNeto;
+        this.estado = estado;
+    }
+
+    public Factura() {
+    }
+
+    public Factura(int nroFactura) {
+        NroFactura = nroFactura;
+    }
+
+    @Id
+    @Column(name ="NroFactura")
+    public int getNroFactura() {
+        return NroFactura;
+    }
+
+    public void setNroFactura(int nroFactura) {
+        NroFactura = nroFactura;
+    }
+
+    @Basic
+    @Column(name ="Periodo")
+    public int getPeriodo() {
+        return periodo;
+    }
+
+    public void setPeriodo(int periodo) {
+        this.periodo = periodo;
+    }
+
+    @Basic
+    @Column(name ="ImporteTotal")
+    public int getImporteTotal() {
+        return importeTotal;
+    }
+
+    public void setImporteTotal(int importeTotal) {
+        this.importeTotal = importeTotal;
+    }
+
+    @Basic
+    @Column(name ="ImporteNeto")
+    public int getImporteNeto() {
+        return importeNeto;
+    }
+
+    public void setImporteNeto(int importeNeto) {
+        this.importeNeto = importeNeto;
+    }
+
+    @Basic
+    @Column(name ="Estado")
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    @Override
+    public String toString() {
+        return "Factura [NroFactura=" + NroFactura + ", periodo=" + periodo + ", importeTotal=" + importeTotal
+                + ", importeNeto=" + importeNeto + ", estado=" + estado + "]";
+    }
+
+    @Override
+    public int hashCode() {
+        final int prime = 31;
+        int result = 1;
+        result = prime * result + NroFactura;
+        result = prime * result + periodo;
+        result = prime * result + importeTotal;
+        result = prime * result + importeNeto;
+        result = prime * result + ((estado == null) ? 0 : estado.hashCode());
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj)
+            return true;
+        if (obj == null)
+            return false;
+        if (getClass() != obj.getClass())
+            return false;
+        Factura other = (Factura) obj;
+        if (NroFactura != other.NroFactura)
+            return false;
+        if (periodo != other.periodo)
+            return false;
+        if (importeTotal != other.importeTotal)
+            return false;
+        if (importeNeto != other.importeNeto)
+            return false;
+        if (estado == null) {
+            if (other.estado != null)
+                return false;
+        } else if (!estado.equals(other.estado))
+            return false;
+        return true;
+    }
+    
+}
