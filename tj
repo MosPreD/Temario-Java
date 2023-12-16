@@ -39,7 +39,7 @@ Queue: es una estructura de datos que combina una cola y una pila ordinarias.
 LinkedList:
 -	Listas enlazadas.
 -	Gran eficiencia agregando y eliminando elementos.
--	
+
 - Características HashSet, LinkedHashSet y TreeSet:
 	HashSet:
 -	Rápida.
@@ -53,8 +53,6 @@ LinkedList:
 	TreeSet:
 -	Es ordenado.
 -	Poco eficiente.
-
-
 
 - Colas: Ventajas y desventajas:
 Ventajas:
@@ -77,12 +75,6 @@ Desventajas:
 	containsValue: Devuelve true si existe el valor.
 	size: Devuelve el número de elementos Clave/Valor del mapa.
 	isEmpty: Devuelve true si el mapa esta vacío.
-
-
-
-
-
-
 
 - Maps: características:
 	HashMap:
@@ -113,7 +105,6 @@ offset	| skip()
 limit | limit()
 group by | collect(groupingBy())
 count	 | count()
-	
 
 - Java Generics: Nombres de parámetros por convención.
 •	E: elemento de una colección
@@ -142,7 +133,6 @@ Threads: o procesos livianos.
 •	Cada proceso tiene al menos uno.
 •	Comparten los recursos del proceso (memoria, y archivos abiertos).
 
-
 - Estados de un subproceso en programación concurrente: nuevo, ejecutable, en espera, en espera sincronizado, terminado, bloquead.
 Nuevo
 El programa inicia el subproceso
@@ -165,15 +155,10 @@ Entra instrucción synchronized
 Se completa petición de E/S 
 Adquiere bloqueo interrupt
 
-
 - Pruebas unitarias: Pruebas Unitarias: pruebas unitarias, pruebas de integración, pruebas de rendimiento.
 	Pruebas unitarias: una prueba unitaria es un fragmento de código escrito por un desarrollador que ejecuta una funcionalidad específica en el código que se va a probar y afirma un determinado comportamiento o estado.
 	Pruebas de integración: una prueba de integración tiene como objetivo probar el comportamiento de un componente o la integración entre un conjunto de componentes.
 	Pruebas de rendimiento: las pruebas de rendimiento se utilizan para comparar componentes de software repetidamente. Su propósito es garantizar que el código bajo prueba se ejecute lo suficientemente rápido incluso si está bajo una carga alta.
-
-
-
-
 
 - Webservices: diferencias entre Soap y Rest:
 Ventajas REST
@@ -195,13 +180,6 @@ WS SECURITY
 Comunicación origen a destino
 seguro
 	
-
-
-
-
-
-
-
 - Swing. Componentes Básicos.
 JFrame: clase para generar ventanas sobre las cuales añadir distintos objetos con los que podrá interactuar el usuario
 JPanel: Proporciona un área en la que pueden colocarse y organizarse los componentes. También puede utilizarse como un área de dibujo para gráficos.
@@ -219,11 +197,6 @@ JProgressBar : Es una barra de progreso
 JList: Proporciona una lista de elementos a partir de los cuales el usuario puede realizar una selección, haciendo clic en cualquier elemento en la lista. Pueden seleccionarse varios elementos.
 JScrollBar . Es una barra de desplazamiento
 JSlider : Este componente llamado deslizador
-	
-
-
-
-
 
 - Modelo Relacional Vs Modelo orientado a objetos.
 	El modelo relacional es un modelo de datos basado en la lógica de predicado y en la teoría de conjuntos para la gestión de una base de datos.
@@ -264,9 +237,6 @@ Orm Asociaciones
 @ManyToOne Relation: Cada registro de una entidad hace referencia a muchas filas secundarias en otra entidad
 @OneToMany Relación: Cada fila de una entidad hace referencia a muchos registros secundarios en otra entidad
 @OneToOne Relation: Cada fila se refiere a una y solo una fila de otra entidad
-
-
-
 
 Inicializadores:
 Lazy Fetch (lectura demorada): cuando existen relaciones entre distintas entidades, las que son dependientes de otras no sean inicializadas con sus valores almacenados en base de datos hasta que no sean explícitamente accedidas (leidas).
