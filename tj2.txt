@@ -1,0 +1,107 @@
+TreeSet no garantiza un orden específico de elementos
+
+Seleccione una:
+Verdadero
+Falso
+
+Dentro del uso del Java Generics: tenemos: Clases genéricas, Tipos genéricos, Métodos genéricos
+
+Verdadero
+Falso
+
+Un proceso en estado "ejecutable" pasa a estar en estado "en espera" mediante el método notify
+
+Verdadero
+Falso
+Una de las ventajas del servicio REST es es que es síncrono
+
+Verdadero
+Falso
+El equivalente de select en Java Streams es el método stream()
+
+Verdadero
+Falso
+Son características de los ArrayList
+¿Cuál de las siguientes interfaces representa una colección que no contiene elementos duplicados?
+
+
+a.
+List
+
+
+b.
+Collection
+
+
+c.
+Set
+¿Cuál de las siguientes herramientas no se utiliza para evaluar el código fuente en busca de posibles problemas?
+
+
+a.
+JSF
+
+
+b.
+klockwork
+
+
+c.
+Kritika
+Dentro de los tipos de inicializaciones de las dependencias, por defecto son de tipo lazy las siguiente relaciones:
+
+
+a.
+@OneToMany
+
+
+b.
+@ManyToOne
+
+
+c.
+@ManyToMany
+
+User
+Son métodos del Api Stream
+
+
+a.
+map
+
+
+b.
+groupby
+
+c.
+sorted
+Cite las 3 interfaces que heredan de Collection
+Métodos de la clase map son:
+
+
+a.
+add
+
+
+b.
+get
+
+
+c.
+put
+
+Cite 3 métodos que se puede utilizar en los distintos estados existentes de procesos
+Cite 3 limitaciones de ORM
+Cite 3 ventajas de los servicios web Soap
+Cite 6 componentes swing
+Cite al menos 6 tipos de anotaciones ORM
+Analice el siguiente código e indique que debe corregirse en el mismo:
+
+    public static void main(String[] args) {
+        ArrayList<String> archivos = new ArrayList<>(5);
+        archivos.add("Juan");
+        archivos.add("Pedro");
+        archivos.add("Ruth");
+        archivos.add(new File("archivo.txt"))
+        String nombrePersona= (String) archivos.get(3);
+    }
